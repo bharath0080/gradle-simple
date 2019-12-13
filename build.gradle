@@ -1,3 +1,8 @@
+buildscript {
+dependencies {
+		classpath('org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5-rc1')
+	}
+}
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'org.sonarqube'
@@ -12,7 +17,6 @@ repositories {
 
 dependencies {
   compile 'com.google.guava:guava:18.0'
-  classpath('org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5-rc1')
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
